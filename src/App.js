@@ -1,7 +1,6 @@
 import { Switch, Route } from "react-router-dom";
-
+import NewAccount from "./components/NewAccount";
 import Home from "./views/Home";
-import NewAccountForm from "./views/NewAccountForm";
 import NotFound from "./views/NotFound";
 
 function App() {
@@ -9,7 +8,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/NewAccount" component={NewAccountForm} />
+        <Route exact path="/NewAccount" component={NewAccount} />
         <Route component={NotFound} />
       </Switch>
     </div>

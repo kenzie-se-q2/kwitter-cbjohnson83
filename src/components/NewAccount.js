@@ -1,16 +1,12 @@
 import React from 'react'
-import { Route,Switch} from "react-router-dom"
+import useNewAccountStore from '../store/useNewAccountStore'
 import NewAccountForm from '../views/NewAccountForm'
-
 const NewAccount = () => {
+    const isSubmitted = useNewAccountStore(state =>state.isSubmitted)
     return (
+        <NewAccountForm/>
        
-        <Switch>
-            <Route exact path = "/NewAccount" component = {NewAccountForm}/>
-        </Switch>
-        
-       
-        
+
     )
 }
 
