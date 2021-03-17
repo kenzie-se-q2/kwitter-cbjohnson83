@@ -1,21 +1,12 @@
 import React,{useEffect } from 'react'
 import {Link} from "react-router-dom"
 import useNewAccountStore from"../store/useNewAccountStore"
-import Home from "../views/Home"
-
 
 const NewAccountForm = () => {
     const user = useNewAccountStore(state =>state.user)
     const handleChange = useNewAccountStore(state =>state.handleChange)
     const handleSubmit = useNewAccountStore(state =>state.handleSubmit)
     const errors = useNewAccountStore(state =>state.errors)
-    const isSubmitted = useNewAccountStore(state =>state.isSubmitted)
-    // useEffect(()=>{
-    //     if(Object.keys(errors).length === 0 && isSubmitted){
-    //       return <Home/>
-    //     }
-    // }, [errors])
-    
     return (
         <>
         <div className = "newAccountFormContainer">

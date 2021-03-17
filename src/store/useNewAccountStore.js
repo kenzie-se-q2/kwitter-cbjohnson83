@@ -12,6 +12,7 @@ const useNewAccountStore = create(set =>({
     },
     errors:{},
     isSubmitted: false,
+   
     handleChange:(event) => set(state=>({
         user:({...state.user,[event.target.name]:event.target.value})
     })),
@@ -21,7 +22,9 @@ const useNewAccountStore = create(set =>({
         set(state =>({
             errors:FormValidation(state.user) 
         }))
-        set(()=>({isSubmitted:true}))     
+        set(()=>({isSubmitted:true}))
+      
+             
     }
 
 })   

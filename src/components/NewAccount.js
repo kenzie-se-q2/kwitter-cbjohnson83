@@ -1,15 +1,25 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import useNewAccountStore from '../store/useNewAccountStore'
-import Home from '../views/Home'
+
 import NewAccountForm from '../views/NewAccountForm'
+import NewUserregistered from '../views/NewUserregistered'
 
 const NewAccount = () => {
-    const isSubmitted = useNewAccountStore(state =>state.issubmitted)
-    useEffect(()=>{},[])
-
+    
+    let isSubmitted = useNewAccountStore(state=>state.isSubmitted)
+    const errors = useNewAccountStore(state =>state.errors)
+    const [formSubmitted, setFormSubmitted] = useState(false)
+    useEffect(()=>{
+        if(Object.keys(errors).length === 0 && isSubmitted){
+           setFormSubmitted(true)
+        }
+        return ()=>{isSubmitted = false}
+       
+        
+    }, [errors])
+   
     return (
-        (!isSubmitted?<NewAccountForm/>:<Home/>)
+        (!formSubmitted?<NewAccountForm />:<NewUserregistered formSubmitted = {isSubmitted}/>)
     )
 }
-
 export default NewAccount
