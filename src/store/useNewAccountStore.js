@@ -1,11 +1,10 @@
 import create from "zustand"
 import FormValidation from "./NewAccountFormValidation"
 
+
 const useNewAccountStore = create(set =>({
     user:{
-        firstName:"",
-        lastName: "",
-        email:"",
+        displayName:"",
         userName:"",
         password: "",
         comfimPassword:""
@@ -22,9 +21,13 @@ const useNewAccountStore = create(set =>({
         set(state =>({
             errors:FormValidation(state.user) 
         }))
-        set(()=>({isSubmitted:true}))
-      
-             
+        set(()=>({isSubmitted:true}))       
+    },
+    afterSubmit:() =>{
+        set(()=>({isSubmitted:false}))
+        set(()=>({user:{}}))
+
+
     }
 
 })   

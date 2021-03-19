@@ -1,19 +1,14 @@
 
 export default function FormValidation(user){
     let errors = {}
-    if(!user.firstName){
-        errors.firstName = "First Name Required"
-    }
-    if(!user.lastName){
-        errors.lastName = "Last Name Required"
+    if(!user.displayName){
+        errors.displayName = "Display Name Required"
     }
 
     if(!user.userName){
         errors.userName= "user name  required"
     }
-    if(!user.email){
-        errors.email = "Email Required"
-     }
+
     if(!user.password){
         errors.password = "password required"
     }else if(user.password < 6){

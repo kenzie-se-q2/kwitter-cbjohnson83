@@ -1,15 +1,20 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import useNewAccountStore from '../store/useNewAccountStore'
 import{Link} from "react-router-dom"
 
 
 const NewUserregistered = (props) => {
-    const user = useNewAccountStore(state=>state.user)
+    const userData = useNewAccountStore(state=>state.user)
+    // const isSubmitted = useNewAccountStore(state=>state.isSubmitted)
+  
+   const handleOnClick = useNewAccountStore(state=>state.afterSubmit)
+
+
     return (
         <div>
-            {user.lastName} {user.firstName} is successfully registered
-            {props.isSubmitted}
-            <div>Click here to<Link to = "/">Login</Link></div> 
+            {userData.userName}  is successfully registered
+           
+            <div>Click here to<Link to = "/"><button onClick={handleOnClick}>Login</button></Link></div> 
             
         </div>
     )

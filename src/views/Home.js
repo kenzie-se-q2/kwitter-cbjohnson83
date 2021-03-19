@@ -11,7 +11,7 @@ function Home(props) {
       <Menu />
       <h2>Your favorite microblogging platform</h2>
       {!user.token && <Login />}
-     <p>New User? <Link to = "/NewAccount">Create Account</Link></p>
+      {!user.token && <p>New User? <Link to = "/NewAccount">Create Account</Link></p>}
     </>
   );
 }
