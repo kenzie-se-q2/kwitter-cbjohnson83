@@ -22,7 +22,8 @@ export const NewUserRequest=(username,displayName,password)=>{
   return fetch(baseURL +"users",{
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
+    body: 
+    JSON.stringify({
       username,
       displayName,
       password,
