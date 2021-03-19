@@ -9,6 +9,6 @@ See my.kenzie.academy for details.
 
 ## Credits and References
 
-Team Members:
+Team Members: Cassandra Johnson (SCRUM), Dunya Moss, Ursuela Simmons (QA), Tucker Serwadda
 
-References
+References:

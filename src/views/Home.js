@@ -8,7 +8,7 @@ function Home(props) {
   return (
     <>
       <Menu />
-      <h2>Your favorite microblogging platform</h2>
+      <h2>An Amazing Microblogging Platform</h2>
       {!user.token && <Login />}
     </>
   );
