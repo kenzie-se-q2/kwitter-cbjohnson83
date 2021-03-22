@@ -28,16 +28,3 @@ export const NewUserRequest = (username, displayName, password) => {
     }),
   });
 };
-
-export const UserProfile = (username, displayName, about, pictureLocation) => {
-  return fetch(baseURL + "profile", {
-    method: "GET",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      username,
-      displayName,
-      about,
-      pictureLocation,
-    }),
-  });
-};
