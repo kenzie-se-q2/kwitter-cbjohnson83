@@ -12,13 +12,15 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/users" component={NewAccount} />
-        <Route component={NotFound} />
         <Route exact path="/userlist" component={UserList} />
+        <Route component={NotFound} />
         <Route
           path="/userlist/:username"
           render={(props) => <User {...props} />}
         />
       </Switch>
+      <div className="container">Display Users</div>
+      <UserList />
     </div>
   );
 }

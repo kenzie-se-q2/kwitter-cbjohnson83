@@ -13,7 +13,7 @@ function Users() {
 
   return (
     <div>
-      <h1>Users List</h1>
+      <h1>Current Users</h1>
 
       {users.map((user) => {
         return <UserCard user={user} key={user.username} />;
