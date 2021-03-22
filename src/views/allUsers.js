@@ -4,7 +4,7 @@ const tstyle ={
     fontFamily: "Trebuchet MS, Arial, Helvetica, sansSerif",
     borderCollapse: "collapse",
     // border: "3px solid #ddd",
-    width: "80%"},
+    width: "85%"},
     tr:{color:"red"},
     trdata:{color:"black"},
     td:{  border: "1px solid #ddd", padding: "8px"}
@@ -12,7 +12,9 @@ const tstyle ={
 
 function AllUsers() {
     const [users,setUsers]= useState([])
+    
     useEffect(()=>{
+        
         fetch("https://kwitter-api-b.herokuapp.com/users")
         .then(resp =>resp.json())
         .then(resp =>setUsers(resp.users))
@@ -35,6 +37,7 @@ function AllUsers() {
                         <td style= {tstyle.td}> {user.username}</td>
                         <td style= {tstyle.td}> {user.displayName}</td>
                         <td style= {tstyle.td}> {user.about}</td>   
+                        <td > <button>show image</button> </td>   
                     </tr>)
                 })}
             </tbody>
