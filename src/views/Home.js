@@ -13,7 +13,7 @@ function Home(props) {
         <h2>A Place to Share Ideas. </h2>
       </div>
       <div id="noHate">
-        <h3>NO HATE SPEACH ALLOWED!</h3>
+        <h3>NO HATE SPEECH ALLOWED!</h3>
       </div>
       {!user.token && <Login />}
       <p>
