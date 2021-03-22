@@ -8,8 +8,7 @@ export const loginRequest = (username, password) => {
       username,
       password,
     }),
-  })
-    .then((res) => res.json())
+  }).then((res) => res.json());
 };
 
 export const logoutRequest = (token) => {
@@ -18,15 +17,27 @@ export const logoutRequest = (token) => {
   }).then((res) => res.json());
 };
 
-export const NewUserRequest=(username,displayName,password)=>{
-  return fetch(baseURL +"users",{
+export const NewUserRequest = (username, displayName, password) => {
+  return fetch(baseURL + "users", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: 
-    JSON.stringify({
+    body: JSON.stringify({
       username,
       displayName,
-      password})
-    })
+      password,
+    }),
+  });
 };
 
+export const UserProfile = (username, displayName, about, pictureLocation) => {
+  return fetch(baseURL + "profile", {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username,
+      displayName,
+      about,
+      pictureLocation,
+    }),
+  });
+};
