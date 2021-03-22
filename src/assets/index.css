@@ -1,9 +1,9 @@
 body {
   background-color: bisque;
   background-image: radial-gradient(
-    coral 90%,
+    rgb(248, 189, 167) 90%,
     rgb(243, 238, 236) 90%,
-    rgb(233, 80, 80) 5%
+    rgb(231, 99, 99) 5%
   );
   border-style: solid;
   border-color: black;
@@ -18,10 +18,65 @@ body {
   border-style: dotted;
 }
 p {
-  color: rgb(49, 4, 4);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#navAbout:hover {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#navSignUp:hover {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#message:hover {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#message {
+}
+
+#nav {
+  text-align: center;
+}
+
+h1 {
+}
+.App {
+  text-align: center;
+}
+#menu {
+  text-align: center;
+  color: rgb(119, 5, 5);
+  /* color: rgb(49, 4, 4); */
+}
+
+#noHate {
+  color: red;
+}
+
+#menu-links {
+  text-align: center;
 }
