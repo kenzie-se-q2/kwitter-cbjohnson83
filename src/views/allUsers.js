@@ -21,7 +21,7 @@ function AllUsers() {
 
     return (
         <div>
-            list of users
+            <h1>LIST OF USERS</h1>
             <table style = {tstyle.table}>
                 <tbody>
             <tr style={tstyle.tr}>
@@ -34,10 +34,7 @@ function AllUsers() {
                     <tr style={tstyle.trdata}>
                         <td style= {tstyle.td}> {user.username}</td>
                         <td style= {tstyle.td}> {user.displayName}</td>
-                        <td style= {tstyle.td}> {user.about}</td>
-                        <td > <button>update</button></td>
-                        <td> <button>Delete</button></td>
-                        
+                        <td style= {tstyle.td}> {user.about}</td>   
                     </tr>)
                 })}
             </tbody>
