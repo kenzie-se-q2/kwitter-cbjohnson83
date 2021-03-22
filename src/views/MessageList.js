@@ -1,22 +1,38 @@
-// TODO: Create a MessageList to display messages
-import React from "react";
-import MessageItem from "./messageItem.js";
-//import css
+import React from "react"
+import "./index.css";
+import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
+import PublishIcon from "@material-ui/icons/Publish";
+import "./profile.js"
+import "./messageItem.js"
 
-const messageBoard = board(({ displayName, username,text, image }) => {
+
+
+let Post = messageBoard(
+  ({ displayName, username, text, image}) => {
     return (
-      <div className="feed">
-        <div className="feedBody">
+
+        <div className="message__body">
+          <div className="message__header">
+            <div className="message__headerText">
               <h3>
-              {displayName}{" "}
-              
+                {displayName}{" "}
                 <span className="post__headerSpecial">
-                  {/*username from profile.js*/}
-                  {/* input text*/}
-                  {/*image url */}
-                  </span>
+                  {username}
+                </span>
               </h3>
+            </div>
+            <div className="post__headerDescription">
+              <p>{text}</p>
+            </div>
+          </div>
+          <img src={image} alt="" />
+          <div className="post__footer">
+            <ChatBubbleOutlineIcon fontSize="small" />
+            <PublishIcon fontSize="small" />
+          </div>
         </div>
-      </div>
     );
-  }); 
+  }
+);
+
+export default messageBoard;

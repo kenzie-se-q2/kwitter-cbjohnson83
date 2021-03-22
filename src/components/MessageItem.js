@@ -14,8 +14,7 @@ function Post() {
             </div>
         </div>
         //need to include profile picture 
-        // include option to post image 
-        //div for css 
+        // include option to post image  
         //see where you can import button designs
     )
 }
