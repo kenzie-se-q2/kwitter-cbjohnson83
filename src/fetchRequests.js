@@ -26,8 +26,7 @@ export const NewUserRequest=(username,displayName,password)=>{
     JSON.stringify({
       username,
       displayName,
-      password,
-    }),
+      password})
+    })
+};
 
-  })
-}

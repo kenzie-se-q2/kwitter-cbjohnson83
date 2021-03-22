@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react'
+import React from 'react'
 import useNewAccountStore from '../store/useNewAccountStore'
 import{Link} from "react-router-dom"
 
