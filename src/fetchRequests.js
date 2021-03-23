@@ -29,14 +29,21 @@ export const NewUserRequest = (username, displayName, password) => {
   });
 };
 
-export const getUserProfile = (token, username, displayName, about) => {
+export const getUserProfile = (
+  token,
+  pictureLocation,
+  username,
+  displayName,
+  about
+) => {
   return fetch(baseURL + `users/${username}`, {
     method: "GET",
     headers: {
-      Authorization: "Bearer " + token,
+      Authorization: "Bearer" + token,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
+      pictureLocation,
       username,
       displayName,
       about,
@@ -44,7 +51,11 @@ export const getUserProfile = (token, username, displayName, about) => {
   });
 };
 
-export const patchUser = (token, username, newUserInfo) => {
+// export const getUserProfile = (username) => {
+//   return fetch(baseURL + `users/${username}`).then((res) => res.json());
+// };
+
+export const patchUserProfile = (token, username, newUserInfo) => {
   return fetch(baseURL + `users/${username}`, {
     method: "PATCH",
     headers: {
@@ -55,15 +66,15 @@ export const patchUser = (token, username, newUserInfo) => {
   }).then((res) => res.json());
 };
 
-// export const putUserPicture = (token, username, pictureData) => {
-//   let formData = new FormData();
-//   formData.append("picture", pictureData);
-//   return fetch(baseURL + `users/${username}/picture`, {
-//     method: "PUT",
-//     headers: {
-//       Authorization: "Bearer " + token,
-//       "Content-Type": "multipart/form-data",
-//     },
-//     body: formData,
-//   }).then((res) => res.json());
-// };
+export const putUserPicture = (token, username, pictureData) => {
+  let formData = new FormData();
+  formData.append("picture", pictureData);
+  return fetch(baseURL + `users/${username}/picture`, {
+    method: "PUT",
+    headers: {
+      Authorization: "Bearer " + token,
+      "Content-Type": "multipart/form-data",
+    },
+    body: formData,
+  }).then((res) => res.json());
+};

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { loginRequest } from "../fetchRequests";
+import { Route } from "react-router-dom";
+import Profile from "../views/Profile";
 
 import { LOGIN, useStore } from "../store/store";
 
-function Login(props){
+function Login(props) {
   const dispatch = useStore((state) => state.dispatch);
 
   const [formData, setFormData] = useState({
@@ -46,8 +48,9 @@ function Login(props){
         />
         <button type="submit">Login</button>
       </form>
+      <Profile />
     </>
   );
-};
+}
 
 export default Login;
