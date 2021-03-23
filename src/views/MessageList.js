@@ -16,19 +16,20 @@ let Post = messageBoard(
             <div className="message__headerText">
               <h3>
                 {displayName}{" "}
-                <span className="post__headerSpecial">
+                <span className="message__headerSpecial">
                   {username}
                 </span>
               </h3>
             </div>
-            <div className="post__headerDescription">
+            <div className="message__headerDescription">
               <p>{text}</p>
             </div>
           </div>
           <img src={image} alt="" />
-          <div className="post__footer">
+          <div className="message__footer">
             <ChatBubbleOutlineIcon fontSize="small" />
             <PublishIcon fontSize="small" />
+            <Button>Publish</Button>
           </div>
         </div>
     );
