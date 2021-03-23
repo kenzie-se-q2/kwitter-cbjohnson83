@@ -7,7 +7,7 @@ import "./messageItem.js"
 
 
 
-let Post = messageBoard(
+const Post = messages(
   ({ displayName, username, text, image}) => {
     return (
 
@@ -36,4 +36,4 @@ let Post = messageBoard(
   }
 );
 
-export default messageBoard;
+export default messages;
