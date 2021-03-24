@@ -1,39 +1,59 @@
-import React from "react"
-import "./index.css";
-import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
-import PublishIcon from "@material-ui/icons/Publish";
-import "./profile.js"
-import "./messageItem.js"
+//displays message box with a post and cancel button
+//displays messageboard of different post
+
+import React from "react";
+import PostAddIcon from '@material-ui/icons/PostAdd';
+import CancelIcon from '@material-ui/icons/Cancel';
+//import "./assets/index.css";
+//import Profile from "./view/profile.js"
+//import MessageItem from "./components/MessageItem.js"
 
 
 
-const Post = messages(
-  ({ displayName, username, text, image}) => {
-    return (
+function Post({userName, text}) {
+  <div className="postBody">
+    <div className="postHeader">
+      <div className="postText">
+        <h3>
+          {userName}{" "}
+        </h3>
+      </div>
+      <div className="postText">
+        <p>{text}</p>
+      </div>
+      <div className="footer">
+        {/* like button */}
+      </div>
+    </div>
 
-        <div className="message__body">
-          <div className="message__header">
-            <div className="message__headerText">
-              <h3>
-                {displayName}{" "}
-                <span className="message__headerSpecial">
-                  {username}
-                </span>
-              </h3>
-            </div>
-            <div className="message__headerDescription">
-              <p>{text}</p>
-            </div>
-          </div>
-          <img src={image} alt="" />
-          <div className="message__footer">
-            <ChatBubbleOutlineIcon fontSize="small" />
-            <PublishIcon fontSize="small" />
-            <Button>Publish</Button>
-          </div>
-        </div>
-    );
-  }
-);
+  </div>
+  
+}
 
-export default messages;
+function MessageList() {
+  return (
+    <div className="messageBoard">
+      <div>
+        {/* Header */}
+        <h2>Message Board of the Mindz</h2>
+      </div>
+
+    {/* Message Item*/}
+    {/*<MessageItem />*/}
+
+    {/* Message Board */}
+    <Post
+      username=" "
+      text=" "
+    />
+    {/*post */}
+    {/*post */}
+    {/*post */}
+    {/*post */}
+    {/*post */}
+    </div>
+  );
+}
+
+
+export default MessageList;

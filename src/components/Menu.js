@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useStore } from "../store/store";
 import { logoutRequest } from "../fetchRequests";
 
+
 function Menu(props) {
   const user = useStore((state) => state.user);
   const dispatch = useStore((state) => state.dispatch);
@@ -16,7 +17,7 @@ function Menu(props) {
     <div id="menu">
       <h1>Kwitter</h1>
       <div id="menu-links">
-        <Link to="/messages">Messages</Link>
+        <Link to="/messageList">Messages</Link>
         {user.token && <button onClick={logout}>Logout</button>}
       </div>
     </div>
