@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import {Link, Route} from "react-router-dom"
-import Image from "./showImage"
+import {Link} from "react-router-dom"
 const tstyle ={
     table:  {textAlign: "center",
     fontFamily: "Trebuchet MS, Arial, Helvetica, sansSerif",
@@ -35,7 +34,8 @@ function AllUsers() {
             <tr style={tstyle.tr}>
                 <td style= {tstyle.td}>User Name</td>
                 <td style= {tstyle.td}>Display Name</td>
-                <td style= {tstyle.td}>About</td></tr>
+                <td style= {tstyle.td}>About</td>
+                <td style= {tstyle.td}>picture Location</td></tr>
                 {users.map(user =>{
                     return(
                         <>
@@ -43,11 +43,10 @@ function AllUsers() {
                         <td style= {tstyle.td}> {user.username}</td>
                         <td style= {tstyle.td}> {user.displayName}</td>
                         <td style= {tstyle.td}> {user.about}</td>   
+                        <td style= {tstyle.td}> {user.pictureLocation}</td>   
                         <td > <Link to = {"/img/" + user.username}>
                         <button >show image</button></Link> </td> 
-                        <Route exact path = "/img/:username" render ={(props)=><Image
-                        {...props}  key={user.username}
-                        user = {user.username}/>}/> 
+                        
                     </tr>
                    </>
                     )
