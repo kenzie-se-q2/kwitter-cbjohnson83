@@ -4,26 +4,36 @@ import Home from "./views/Home";
 import NotFound from "./views/NotFound";
 import {useStore} from "./store/store"
 import Image from "./views/showImage";
-
+import Navbar from "./views/Navbar";
+import Feed from "./views/Feed";
+import Profile from "./views/Profile";
+import UserUpdate from "./views/UserUpdate";
 
 
 function App() {
-  const user = useStore(state=>state.user)
-  console.log(user)
-  
+  const user = useStore((state) => state.user);
+ 
   return (
     <div className="App">
+      <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/notfound" component={NotFound} />
+        <Route exact path="/Feeds" component={Feed} />
         <Route exact path="/users" component={NewAccount} />
+
         <Route exact path = "/img/:username" render ={(props)=><Image
                         {...props}  key={user.username}
                         user = {user.username}/>}/> 
         
+
+        <Route exact path="/profile/:username" component={Profile} />
+        <Route exact path="/userupdate" component={UserUpdate} />
+
+
       </Switch>
     </div>
   );
 }
-
 
 export default App;

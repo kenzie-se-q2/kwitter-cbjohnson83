@@ -1,24 +1,31 @@
-import { Card, Button } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Card } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
-// import { useStore } from "../store";
 
-function UserCard({ user }) {
-  const history = useHistory();
-  // const user = useStore((state) => state.user);
+function UserCard() {
+  const [user, setUser] = useState([]);
+
+  useEffect(() => {
+    fetch("https://kwitter-api-b.kerokuapp.com/users/{username}")
+      .then((resp) => resp.json())
+      .then((resp) => setUser(resp.user.username));
+  }, []);
+
   return (
-    <Card style={{ width: "18rem" }}>
-      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-      <Card.Body>
-        <Card.Title>{user.username}</Card.Title>
-        <Card.Text>{user.displayName}</Card.Text>
-        <Button
-          onClick={() => history.push(`/users/${user.username}`)}
-          variant="primary"
-        >
-          See user
-        </Button>
-      </Card.Body>
-    </Card>
+    <Container>
+      <Card style={{ width: "18 rem" }}>
+        <Card.Body>
+          <Card.Title>User Information: </Card.Title>
+          <div>Username: </div>
+          <Card.Text>{user.username}</Card.Text>
+          <div>Display Name: </div>
+          <Card.Text>{user.displayName}</Card.Text>
+          <div>About Me:</div>
+          <Card.Text>{user.about}</Card.Text>
+        </Card.Body>
+      </Card>
+    </Container>
+
   );
 }
 
