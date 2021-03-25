@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
 import { useStore } from "../store/store";
@@ -37,3 +39,4 @@ function Profile({ match }) {
 }
 
 export default Profile;
+
