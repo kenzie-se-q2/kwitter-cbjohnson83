@@ -1,61 +1,52 @@
-//displays message box and postboard
-//displays messageboard of different post
-
 import React from "react";
-import PostAddIcon from '@material-ui/icons/PostAdd';
-import CancelIcon from '@material-ui/icons/Cancel';
+import {useState} from "react";
+import {PostAddIcon } from '@material-ui/icons/PostAdd';
+import MessageItem from "../components/MessageItem";
 //import "./assets/index.css";
 //import Profile from "./view/profile.js"
-//import MessageItem from "./components/MessageItem.js"
 
 
 
+//display text box of where user can type in message 
+function MessageBox() {
+  const [userMessage, setUserMessage] = useState(" ");
+  const [userPostImage, setUserPostImage] = useState(" ");
 
+  const UserPost=(event)=>{
+    event.preventDefault();
 
-function Post({userName, text}) {
-  <div className="postBody">
-    <div className="postHeader">
-      <div className="postText">
-        <h3>
-          {userName}{" "}
-        </h3>
-      </div>
-      <div className="postText">
-        <p>{text}</p>
-      </div>
-      <div className="footer">
-        {/* like button */}
-      </div>
-    </div>
-
-  </div>
-  
-}
-
-function MessageList() {
+    MessageItem.add({
+      userName: { },
+      userText: { },
+      userImage: { },
+    })
+    setUserMessage(" ");
+    setUserPostImage(" ");
+  }
   return (
-    <div className="messageList">
-      <div>
-        {/* Header */}
-        <h2>Message Board of the Mindz</h2>
-      </div>
-
-    {/* Message Item*/}
-    {/*<MessageItem />*/}
-
-    {/* Message Board or list */}
-    <Post
-      username=" "
-      text=" "
-    />
-    {/*post */}
-    {/*post */}
-    {/*post */}
-    {/*post */}
-    {/*post */}
+    <div className="messageBox">
+      <form>
+        <div className="messageBoxInput">
+          <input 
+          onChange={(event)=>setUserMessage(event.target.value)}
+          value={userMessage}
+          placeholder="What's going on in that Mindz?"
+          type="text"
+          />
+        </div>
+        <input 
+          onChange={(event)=>setUserPostImage(event.target.value)}
+          value={userPostImage}
+          placeholder="Do you want to attach a picture?"
+          type="text"
+          />
+        <button onClick={UserPost} type="submit" className="postButton">Post</button>
+      </form>
     </div>
   );
 }
 
+export default MessageBox;
 
-export default MessageList;
+
+
