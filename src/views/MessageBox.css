@@ -1,0 +1,36 @@
+body {
+    background-color: whitesmoke;
+}
+
+.messageBox {
+    padding-left: 0%;
+    background-color: whitesmoke;
+}
+
+.messageBoxInput {
+    background-color: whitesmoke;
+    padding: 20px;
+    display: flex;
+}
+
+.messageBoxInput > input {
+    flex: 1;
+    /* allows as much space as it can*/
+    margin-left: 40px;
+    font-size: 40 px;
+    border: none;
+    outline: none;
+}
+
+.messageBoxImage {
+    background-color: whitesmoke;
+    padding: 5px;
+    display: flex;
+}
+.messageBoxImage > input {
+    flex: 1;
+    margin-left: 100px;
+    border: none;
+    outline: none;
+}
+

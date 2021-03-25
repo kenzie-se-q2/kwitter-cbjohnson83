@@ -1,5 +1,8 @@
 //import React, { forwardRef } from "react"
 //import "./assets/index.css";
+import React from 'react'
+import { Avatar } from "@material-ui/core";
+
 
 
 //post that will appear in messageboard
@@ -8,16 +11,20 @@ const MessageItem = (
         return (
             <div className="messagePostBody">
                 <div className="messagePostHeader">
+                <div className="messageBoardAvatar">
+                    <Avatar/>
+                </div>
                     <div className="messagePostHeaderText">
                         <span>
-                            <h2>{userName}</h2>
+                            <h2>{"Ursuela"}</h2>
                         </span>
                     </div>
-                    <p>{text}</p>
+                    <img src={" "}/>
+                    <p>{Text}</p>
                 </div>
                 <div className="messagePostFooter">
-                    <button>Post</button>
-                    {/*need to add function to button*/}
+                    <button>Like</button>
+                    
                 </div>
             </div>
         )
