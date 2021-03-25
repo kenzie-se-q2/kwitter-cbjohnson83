@@ -18,8 +18,13 @@ const DeleteUser = () => {
     useEffect(()=>{
         if(deleteUser ===true){
             alert("user has been succefully Deleted")
-             window.location.reload()
+             window.location.reload(true)
 
+        }
+        return ()=>{
+            if(deleteUser === false){
+                window.location.reload(false)
+            }
         }
 
     },[deleteUser])
