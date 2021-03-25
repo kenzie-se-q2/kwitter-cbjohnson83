@@ -1,3 +1,6 @@
+
+
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -17,11 +20,13 @@ const tstyle = {
 function AllUsers() {
   const [users, setUsers] = useState([]);
 
+
   useEffect(() => {
     fetch("https://kwitter-api-b.herokuapp.com/users")
       .then((resp) => resp.json())
       .then((resp) => setUsers(resp.users));
   }, []);
+
 
   return (
     <div>
@@ -49,6 +54,7 @@ function AllUsers() {
       </table>
     </div>
   );
+
 }
 
 export default AllUsers;

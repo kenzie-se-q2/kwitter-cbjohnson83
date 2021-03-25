@@ -25,6 +25,7 @@ function UserCard() {
         </Card.Body>
       </Card>
     </Container>
+
   );
 }
 

@@ -31,6 +31,16 @@ export const NewUserRequest = (username, displayName, password) => {
       password,
     }),
   });
+
+};
+export const DeleteuserRequest = (token, username)=>{
+  return fetch(baseURL + "users/" + username,{
+    method: "DELETE",
+    headers: { Authorization: "Bearer " + token}
+  }).then((res) => res.json());
+  
+}
+=======
 };
 
 // export const getUserProfile = (
@@ -88,3 +98,4 @@ export const putUserPicture = (token, username, pictureData) => {
   //   getPicture = URL.createObjectURL(images)
   //   console.log(getPicture) }
 };
+
