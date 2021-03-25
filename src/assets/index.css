@@ -5,6 +5,7 @@ body {
     rgb(243, 238, 236) 90%,
     rgb(231, 99, 99) 5%
   );
+
   /* background-image: url(src/asset/image/meeting_of_the_mindz2.jpg); */
   /* background-image: url(https://riskthinking.ai/wp-content/uploads/2020/08/meetingoftheminds-logo-square.jpg), */
   /* no-repeat; */
@@ -31,8 +32,8 @@ code {
 
 #navAbout:hover {
   border: none;
-  color: white;
-  padding: 15px 32px;
+  background-color: rgb(243, 142, 189);
+  padding: 3px 2px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -41,18 +42,18 @@ code {
 
 #navSignUp:hover {
   border: none;
-  color: white;
-  padding: 15px 32px;
+  background-color: rgb(243, 142, 189);
+  padding: 3px 2px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
 }
 
-#message:hover {
+#contactUs:hover {
   border: none;
-  color: white;
-  padding: 15px 32px;
+  background-color: rgb(243, 142, 189);
+  padding: 3px 2px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -83,4 +84,14 @@ h1 {
 
 #menu-links {
   text-align: center;
+}
+
+button {
+  color: rgb(107, 53, 14);
+  background-color: rgb(240, 144, 160);
+}
+
+#shareIdeas {
+  text-transform: uppercase;
+  color: rgb(83, 6, 22);
 }
