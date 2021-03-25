@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import AllUsers from "./allUsers";
 import Profile from "./Profile";
 
+
 function Home(props) {
   const user = useStore((state) => state.user);
   const [showUserList, setShowUserList] = useState(false);
@@ -18,15 +19,43 @@ function Home(props) {
   return (
     <>
       <Menu />
-      <h2>Your favorite microblogging platform</h2>
+      <div id="shareIdeas">
+        <h2>A Place to Share Ideas. </h2>
+      </div>
+      <div id="noHate">
+        <h3>NO HATE SPEECH ALLOWED!</h3>
+      </div>
       {!user.token && <Login />}
+
       {user.token && <Profile />}
+
+
+      <p>
+        New User? <Link to="/NewAccount">Create Account</Link>
+      </p>
+      {/* <div class="box">
+        <div class="wave -one"></div>
+        <div class="wave -two"></div>
+        <div class="wave -three"></div>
+      </div> */}
+
+      {!user.token && <p>New User? <Link to = "/users">Create Account</Link></p>}
+      {!user.token&&(
+        showUserList=== false? 
+        <button onClick = {handleShowUserList}>Show List of Users</button>:
+        (
+          <>
+        <button onClick= {hideUserList}>Hide List</button>
+        <AllUsers/>
+        </>)
+
 
       {!user.token && (
         <p>
           New User? <Link to="/users">Create Account</Link>
         </p>
       )}
+
       {!user.token &&
         (showUserList === false ? (
           <button onClick={handleShowUserList}>Show List of Users</button>
@@ -37,6 +66,10 @@ function Home(props) {
             <AllUsers />
           </>
         ))}
+
+      
+
+
     </>
   );
 }
