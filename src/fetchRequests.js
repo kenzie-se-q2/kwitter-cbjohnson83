@@ -1,6 +1,7 @@
 
 //const baseURL = "https://socialapp-api.herokuapp.com/";
 const baseURL = "https://kwitter-api-b.herokuapp.com/";
+// const getPicture =
 
 
 export const loginRequest = (username, password) => {
@@ -32,41 +33,44 @@ export const NewUserRequest = (username, displayName, password) => {
   });
 };
 
-export const getUserProfile = (
-  token,
-  pictureLocation,
-  username,
-  displayName,
-  about
-) => {
-  return fetch(baseURL + `users/${username}`, {
-    method: "GET",
-    headers: {
-      Authorization: "Bearer" + token,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      pictureLocation,
-      username,
-      displayName,
-      about,
-    }),
-  });
-};
+// export const getUserProfile = (
+//   token,
+// pictureLocation,
+// username
+// displayName,
+// about
+// ) => {
+//   return fetch(baseURL + `users/${username}/`, {
+//     method: "GET",
+//     headers: {
+//       Authorization: "Bearer" + token,
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       username,
+//     }),
+//   });
+// };
 
 // export const getUserProfile = (username) => {
 //   return fetch(baseURL + `users/${username}`).then((res) => res.json());
 // };
 
-export const patchUserProfile = (token, username, newUserInfo) => {
+export const getUserPhoto = (username, pictureLocation) => {
+  return baseURL + `users/${username}/picture`;
+};
+
+export const patchUserProfile = (token, username, about, displayName) => {
   return fetch(baseURL + `users/${username}`, {
     method: "PATCH",
     headers: {
       Authorization: "Bearer " + token,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(newUserInfo),
-  }).then((res) => res.json());
+    body: JSON.stringify(about, displayName),
+  })
+    .then((res) => res.json())
+    .then((res) => console.log(res));
 };
 
 export const putUserPicture = (token, username, pictureData) => {
@@ -76,8 +80,11 @@ export const putUserPicture = (token, username, pictureData) => {
     method: "PUT",
     headers: {
       Authorization: "Bearer " + token,
-      "Content-Type": "multipart/form-data",
     },
     body: formData,
   }).then((res) => res.json());
+  // .then(images => {
+  //   // Then create a local URL for that image and print it
+  //   getPicture = URL.createObjectURL(images)
+  //   console.log(getPicture) }
 };
