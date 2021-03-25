@@ -1,17 +1,17 @@
 import create from "zustand"
 import FormValidation from "./NewAccountFormValidation"
 
+
 const useNewAccountStore = create(set =>({
     user:{
-        firstName:"",
-        lastName: "",
-        email:"",
+        displayName:"",
         userName:"",
         password: "",
         comfimPassword:""
     },
     errors:{},
     isSubmitted: false,
+   
     handleChange:(event) => set(state=>({
         user:({...state.user,[event.target.name]:event.target.value})
     })),
@@ -21,7 +21,12 @@ const useNewAccountStore = create(set =>({
         set(state =>({
             errors:FormValidation(state.user) 
         }))
-        set(()=>({isSubmitted:true}))     
+        set(()=>({isSubmitted:true}))       
+    },
+    afterSubmit:() =>{
+        set(()=>({isSubmitted:false}))
+        set(()=>({user:{}}))
+        set(() =>({errors:{}}))
     }
 
 })   

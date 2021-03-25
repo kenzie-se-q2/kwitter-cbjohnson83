@@ -6,12 +6,17 @@ body {
     rgb(231, 99, 99) 5%
   );
 
+
   /* background-image: url(src/asset/image/meeting_of_the_mindz2.jpg); */
   /* background-image: url(https://riskthinking.ai/wp-content/uploads/2020/08/meetingoftheminds-logo-square.jpg), */
   /* no-repeat; */
   /* opacity: 24%; */
   /* border-style: solid; */
   /* border-color: black; */
+
+  border-style: solid;
+  border-color: black;
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -32,8 +37,13 @@ code {
 
 #navAbout:hover {
   border: none;
+
   background-color: rgb(243, 142, 189);
   padding: 3px 2px;
+
+  color: white;
+  padding: 15px 32px;
+
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -42,23 +52,36 @@ code {
 
 #navSignUp:hover {
   border: none;
+
   background-color: rgb(243, 142, 189);
   padding: 3px 2px;
+
+  color: white;
+  padding: 15px 32px;
+
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
 }
 
+
 #contactUs:hover {
   border: none;
   background-color: rgb(243, 142, 189);
   padding: 3px 2px;
+
+#message:hover {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
 }
+
 
 #Search:hover {
   border: none;
@@ -92,6 +115,9 @@ code {
   /* display: inline-block; */
   background-color: rgb(243, 145, 145);
   margin: 2px;
+=======
+#message {
+
 }
 
 #nav {
@@ -117,6 +143,7 @@ h1 {
   text-align: center;
 }
 
+
 button {
   color: rgb(107, 53, 14);
   background-color: rgb(240, 144, 160);
@@ -126,3 +153,5 @@ button {
   text-transform: uppercase;
   color: rgb(83, 6, 22);
 }
+
+
