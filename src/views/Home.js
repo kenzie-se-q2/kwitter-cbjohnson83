@@ -4,6 +4,7 @@ import Menu from "../components/Menu";
 import { useStore } from "../store/store";
 import {Link} from "react-router-dom"
 import AllUsers from "./allUsers";
+import DeleteUser from "../components/DeleteUser";
 
 function Home(props) {
   const user = useStore((state) => state.user);
@@ -18,6 +19,7 @@ function Home(props) {
       <Menu />
       <h2>Your favorite microblogging platform</h2>
       {!user.token && <Login />}
+      {user.token && <DeleteUser/>}
       {!user.token && <p>New User? <Link to = "/users">Create Account</Link></p>}
       {!user.token&&(
         showUserList=== false? 

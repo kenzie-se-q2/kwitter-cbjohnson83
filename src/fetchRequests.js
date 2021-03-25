@@ -28,3 +28,10 @@ export const NewUserRequest = (username, displayName, password) => {
     }),
   });
 };
+export const DeleteuserRequest = (token, username)=>{
+  return fetch(baseURL + "users/" + username,{
+    method: "DELETE",
+    headers: { Authorization: "Bearer " + token}
+  }).then((res) => res.json());
+  
+}
