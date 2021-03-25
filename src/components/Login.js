@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { loginRequest } from "../fetchRequests";
-import { Route } from "react-router-dom";
-import Profile from "../views/Profile";
+// import { Route } from "react-router-dom";
+// import Profile from "../views/Profile";
 
 import { LOGIN, useStore } from "../store/store";
 
@@ -48,7 +48,6 @@ function Login(props) {
         />
         <button type="submit">Login</button>
       </form>
-      <Profile />
     </>
   );
 }

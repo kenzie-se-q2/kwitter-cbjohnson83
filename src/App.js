@@ -8,17 +8,17 @@ import UserUpdate from "./views/UserUpdate";
 
 function App() {
   const user = useStore((state) => state.user);
-  console.log(user);
+  // console.log(user);
 
   return (
     <div className="App">
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/notfound" component={NotFound} />
         <Route exact path="/users" component={NewAccount} />
-        <Route exact path="/profile" component={Profile} />
+        <Route exact path="/profile/:username" component={Profile} />
         <Route exact path="/userupdate" component={UserUpdate} />
       </Switch>
-      <Profile />
     </div>
   );
 }
