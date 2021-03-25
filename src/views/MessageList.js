@@ -1,6 +1,6 @@
 import React from "react";
 import {useState} from "react";
-import {PostAddIcon } from '@material-ui/icons/PostAdd';
+//import {PostAddIcon} from '@material-ui/icons/PostAdd';
 import MessageItem from "../components/MessageItem";
 //import "./assets/index.css";
 //import Profile from "./view/profile.js"
@@ -26,6 +26,7 @@ function MessageBox() {
   return (
     <div className="messageBox">
       <form>
+      <h1> Mindz </h1>
         <div className="messageBoxInput">
           <input 
           onChange={(event)=>setUserMessage(event.target.value)}

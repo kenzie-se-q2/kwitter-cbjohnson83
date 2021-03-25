@@ -1,8 +1,6 @@
-
-import React, { forwardRef } from "react"
+//import React, { forwardRef } from "react"
 //import "./assets/index.css";
-import PostAddIcon from '@material-ui/icons/PostAdd';
-import CancelIcon from '@material-ui/icons/Cancel';
+
 
 //post that will appear in messageboard
 const MessageItem = (
