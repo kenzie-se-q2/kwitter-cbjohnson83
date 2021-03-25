@@ -60,7 +60,38 @@ code {
   font-size: 16px;
 }
 
-#message {
+#Search:hover {
+  border: none;
+  background-color: rgb(243, 142, 189);
+  padding: 3px 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#home:hover {
+  border: none;
+  background-color: rgb(243, 142, 189);
+  padding: 3px 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.articles {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  font-family: sans-serif;
+  padding: 15px;
+}
+
+.articleLink {
+  /* display: inline-block; */
+  background-color: rgb(243, 145, 145);
+  margin: 2px;
 }
 
 #nav {

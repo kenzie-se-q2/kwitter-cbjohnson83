@@ -3,6 +3,7 @@ import NewAccount from "./components/NewAccount";
 import Home from "./views/Home";
 import NotFound from "./views/NotFound";
 import Navbar from "./views/Navbar";
+import Feed from "./views/Feed";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/NewAccount" component={NewAccount} />
+        <Route exact path="/Feeds" component={Feed} />
         <Route component={NotFound} />
       </Switch>
     </div>

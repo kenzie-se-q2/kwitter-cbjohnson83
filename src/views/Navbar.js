@@ -25,6 +25,9 @@ const Navbar = () => {
       <div id="nav">
         {/* <NavLink></NavLink> */}
         {/* <NavMenu> */}
+        <div id="home">
+          <Link to="/">Home</Link>
+        </div>
         <div id="navAbout">
           <Link to="/about">Profile</Link>
         </div>
@@ -33,6 +36,9 @@ const Navbar = () => {
         </div>
         <div id="contactUs">
           <Link to="/contactUs">Contact Us</Link>
+        </div>
+        <div id="Search">
+          <Link to="/Feeds">Search Articles</Link>
         </div>
         <button onClick={handleGoogleLogin}>Google Sign In</button>
       </div>

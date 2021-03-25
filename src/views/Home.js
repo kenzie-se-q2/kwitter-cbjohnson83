@@ -19,6 +19,11 @@ function Home(props) {
       <p>
         New User? <Link to="/NewAccount">Create Account</Link>
       </p>
+      {/* <div class="box">
+        <div class="wave -one"></div>
+        <div class="wave -two"></div>
+        <div class="wave -three"></div>
+      </div> */}
     </>
   );
 }
