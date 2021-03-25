@@ -13,7 +13,13 @@ function MessageItem() {
     const sendUserPost = (event)=> {
         event.default();
 
-        message
+        MessageItem.add({
+            userName:{ },
+            text: { },
+            userProfile: { },
+        })
+        setUserPost("");
+        setUserPostImage;
     }
             /*function Example() {
             // Declare a new state variable, which we'll call "count"
