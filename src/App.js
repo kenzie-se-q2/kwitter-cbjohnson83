@@ -8,7 +8,6 @@ import UserUpdate from "./views/UserUpdate";
 
 function App() {
   const user = useStore((state) => state.user);
-  // console.log(user);
 
   return (
     <div className="App">

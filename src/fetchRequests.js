@@ -1,5 +1,4 @@
 const baseURL = "https://kwitter-api-b.herokuapp.com/";
-// const getPicture =
 
 export const loginRequest = (username, password) => {
   return fetch(baseURL + "auth/login", {
@@ -30,29 +29,6 @@ export const NewUserRequest = (username, displayName, password) => {
   });
 };
 
-// export const getUserProfile = (
-//   token,
-// pictureLocation,
-// username
-// displayName,
-// about
-// ) => {
-//   return fetch(baseURL + `users/${username}/`, {
-//     method: "GET",
-//     headers: {
-//       Authorization: "Bearer" + token,
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify({
-//       username,
-//     }),
-//   });
-// };
-
-// export const getUserProfile = (username) => {
-//   return fetch(baseURL + `users/${username}`).then((res) => res.json());
-// };
-
 export const getUserPhoto = (username, pictureLocation) => {
   return baseURL + `users/${username}/picture`;
 };
@@ -80,8 +56,4 @@ export const putUserPicture = (token, username, pictureData) => {
     },
     body: formData,
   }).then((res) => res.json());
-  // .then(images => {
-  //   // Then create a local URL for that image and print it
-  //   getPicture = URL.createObjectURL(images)
-  //   console.log(getPicture) }
 };
