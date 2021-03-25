@@ -5,6 +5,7 @@ body {
     rgb(243, 238, 236) 90%,
     rgb(231, 99, 99) 5%
   );
+
   border-style: solid;
   border-color: black;
   margin: 0;
@@ -14,6 +15,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .newAccountFormContainer {
   border-style: dotted;
 }
@@ -64,13 +66,14 @@ code {
 
 h1 {
 }
+
 .App {
   text-align: center;
 }
+
 #menu {
   text-align: center;
   color: rgb(119, 5, 5);
-  /* color: rgb(49, 4, 4); */
 }
 
 #noHate {
@@ -80,45 +83,3 @@ h1 {
 #menu-links {
   text-align: center;
 }
-
-/* #pageTitle {
-  text-align: center;
-}
-
-#changeDisplayName {
-  padding: 5px;
-  margin: 3%;
-  margin-top: 5%;
-  font-size: 20px;
-  text-align: justify;
-} */
-
-/* form {
-  margin: center;
-  margin-left: 30%;
-  max-width: 320px;
-}
-
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
-
-  margin-top: 24px;
-}
-label {
-  margin-bottom: 8px;
-  display: block;
-  color: #2b2e4a;
-}
-input:not([type="checkbox"]):not([type="radio"]),
-select,
-textarea {
-  padding: 8px;
-  width: 100%;
-  border-top: 0;
-  border-right: 0;
-  border-bottom: 10%;
-  border-left: 0;
-  transition: border-bottom-color 0.15s ease-in;
-} */

@@ -18,7 +18,12 @@ function Home(props) {
   return (
     <>
       <Menu />
-      <h2>Your favorite microblogging platform</h2>
+      <div id="shareIdeas">
+        <h2>A Place to Share Ideas. </h2>
+      </div>
+      <div id="noHate">
+        <h3>NO HATE SPEACH ALLOWED!</h3>
+      </div>
       {!user.token && <Login />}
       {user.token && <Profile />}
 

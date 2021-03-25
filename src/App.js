@@ -5,12 +5,14 @@ import NotFound from "./views/NotFound";
 import { useStore } from "./store/store";
 import Profile from "./views/Profile";
 import UserUpdate from "./views/UserUpdate";
+import Navbar from "./views/Navbar";
 
 function App() {
   const user = useStore((state) => state.user);
 
   return (
     <div className="App">
+      <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/notfound" component={NotFound} />
