@@ -1,9 +1,20 @@
+//User posting their message to the webpage (Tweeter box)
+
+
 import React from "react"
 //import "./assets/index.css";
 import PostAddIcon from '@material-ui/icons/PostAdd';
 import CancelIcon from '@material-ui/icons/Cancel';
 
 function MessageItem() {
+    const [userPost, setUserPost] = useState(" ");
+    const [userPostImage, setUserPostImage] = useState (" ");
+
+    const sendUserPost = (event)=> {
+        event.default();
+
+        message
+    }
             /*function Example() {
             // Declare a new state variable, which we'll call "count"
             const [count, setCount] = useState(0);*/
