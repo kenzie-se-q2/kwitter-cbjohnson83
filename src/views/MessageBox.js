@@ -1,43 +1,50 @@
 import { Avatar , Button } from "@material-ui/core";
-import React from "react";
+//import {useEffect} from "react";
 import {useState} from "react";
 //import {PostAddIcon} from '@material-ui/icons/PostAdd';
 //import MessageItem from "../components/MessageItem";
 import "./MessageBox.css";
-//import Profile from "./view/profile.js"
+//import Profile from "./view/profile.js";
+import {useStore} from "../store/store";
+import { FlashOffOutlined } from "@material-ui/icons";
+import { createMessgeRequest } from "../fetchRequests";
+//import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
 
 function MessageBox() {
+  const user = useStore((state)=>state.user)
+  const[message,setMessage] = useState("")
+  const [text, setText] = useState({text: " "})
+  const[IsPosted, setIsPosted] = useState(FlashOffOutlined)
+  const handleOnChange=(event)=>{
+    setMessage(...message ,[event.target.value])
 
-/*const [userMessage, setUserMessage] = useState(" ");
-const [userPostImage, setUserPostImage] = useState(" ");
-
-function UserInfo(event) {
-  updateUserMessage(event.target.value)
-
-}
- function EnterPost(event) {
-
-  if (event.key === "Left button clicked") {
   }
-}
-}
-;
+  const handleSubmit = (event)=>{
+    event.preventDefault()
+    setIsPosted(true)
+    setText({ text : message })
+    createMessgeRequest(user.token, text)
+    .then((response)=> console.log(response))
+  }
+   // useEffect(()=> {
+      //if(IsPosted===true) {
+        //createMessgeRequest(user.token, message)
+        //.then((response)=> console.log(response))
+      //}
+   // },[message])
 
-useEffect(()=>{
-  window.addEventListener("Leftclick", handleKeyDown);
-*/
     return (
         <div className="messageBox">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="messageBoxInput"> 
-              <Avatar src=" "/>
-              <input type="text" placeholder="What's on your Mindz?"/>
+              <div className="userName">
+                {user.username}
+                <div>{message}</div>
+              </div>
+              <Avatar src=" " alt =" "/>
+              <input onChange ={handleOnChange} name= "message" type="text" placeholder="What's on your Mindz?"/>
         </div>
-        <div className="messageBoxImage">
-        <input placeholder="Do you want to attach a picture?" type="text"/>
-        </div>
-        <Button className="messageBoxButton">Post</Button>
-      
+        <Button type="submit" className="postButton">Post</Button>
       </form>
       
     </div>
@@ -54,15 +61,15 @@ export default MessageBox
   const UserPost=(event)=>{
     event.preventDefault();
 
-    MessageItem.add({
-      userName: { },
-      userText: { },
-      userImage: { },
-    })
-    setUserMessage(" ");
+    const MessagePost = onePost({
+      /*userName.add(),
+      userText.add(),
+      userImage.add(),*/
+    //})
+    /*setUserMessage(" ");
     setUserPostImage(" ");
-  }
-  return (
+  //}
+  /*return (
     <div className="messageBox">
       <form>
       <h1> Mindz</h1>

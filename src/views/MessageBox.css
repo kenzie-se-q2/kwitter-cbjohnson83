@@ -9,14 +9,14 @@ body {
 
 .messageBoxInput {
     background-color: whitesmoke;
-    padding: 20px;
+    /*padding: 20px;*/
     display: flex;
 }
 
 .messageBoxInput > input {
     flex: 1;
     /* allows as much space as it can*/
-    margin-left: 40px;
+    /*margin-left: 40px;*/
     font-size: 40 px;
     border: none;
     outline: none;
@@ -29,7 +29,7 @@ body {
 }
 .messageBoxImage > input {
     flex: 1;
-    margin-left: 100px;
+    /*margin-left: 100px;*/
     border: none;
     outline: none;
 }

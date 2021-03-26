@@ -1,12 +1,14 @@
 import React from "react";
-import "./MessageList.css"
-import MessageBox from "./MessageBox.js"
-import MessageItem from "./MessageItem.js"
+import "./MessageList.css";
+import MessageBox from "./MessageBox.js";
+import MessageItem from "./MessageItem.js";
+import {useStore} from "../store/store";
 
 
 
 //MessageBoard containing MessageBox and MessageItems 
 function MessageList() {
+   
   return (
     <div className="MessageList">
       <div className="MessageHeader">
@@ -15,6 +17,7 @@ function MessageList() {
 
     {/* Message Box*/}
     <MessageBox/>
+
     {/* MessageItem (post)*/}
     <MessageItem/>
     {/* MessageList (board)(all together) */}

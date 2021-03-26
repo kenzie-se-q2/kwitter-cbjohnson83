@@ -17,3 +17,12 @@ export const logoutRequest = (token) => {
     headers: { Authorization: "Bearer " + token },
   }).then((res) => res.json());
 };
+export const createMessgeRequest =(token, text)=> {
+  return fetch(baseURL + "/messages" , {
+    method: "POST",
+    headers: { Authorization: "Bearer " + token , "Content-Type": "application/json" },
+    body: JSON.stringify({
+      text,
+    })})
+    .then((res) => res.json())
+  }
