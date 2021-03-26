@@ -77,7 +77,6 @@ const NewAccountForm = () => {
             Create Account
           </button>
           <span>
-            {" "}
             You have an Account?<Link to="/">Login</Link>
           </span>
         </form>

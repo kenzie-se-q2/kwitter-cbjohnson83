@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 // import Glogin from "./GoogleLogin";
 import { useEffect } from "react";
 import { LOGIN, useStore } from "../store/store";
-
 const Navbar = () => {
   const dispatch = useStore((state) => state.dispatch);
-
   function handleMessage(event) {
     console.log(event);
     dispatch({ type: LOGIN, payload: event.data });
@@ -32,22 +30,20 @@ const Navbar = () => {
           <Link to="/about">Profile</Link>
         </div>
         <div id="navSignUp">
-          <Link to="/sign-up">Sign Up</Link>
+          <Link to="/newaccount">Sign Up</Link>
         </div>
-        <div id="contactUs">
-          <Link to="/contactUs">Contact Us</Link>
-        </div>
-        <div id="Search">
+        {/* <div id="contactUs">
+           <Link to="/contactUs">Contact Us</Link>
+         </div> */}
+        {/* <div id="Search">
           <Link to="/Feeds">Search Articles</Link>
-        </div>
+        </div> */}
         <button onClick={handleGoogleLogin}>Google Sign In</button>
       </div>
       {/* </NavMenu> */}
       {/* <NavBtn></NavBtn> */}
-
       {/* <Glogin /> */}
     </>
   );
 };
-
 export default Navbar;

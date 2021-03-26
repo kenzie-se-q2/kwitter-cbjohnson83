@@ -1,8 +1,9 @@
+import { useStore } from "../store/store";
+import { Link } from "react-router-dom";
 import React from "react";
 import Login from "../components/Login";
 import Menu from "../components/Menu";
-import { useStore } from "../store/store";
-import { Link } from "react-router-dom";
+import Profile from "./Profile";
 
 function Home(props) {
   const user = useStore((state) => state.user);
@@ -15,6 +16,7 @@ function Home(props) {
       <div id="noHate">
         <h3>NO HATE SPEECH ALLOWED!</h3>
       </div>
+      {user.token && <Profile />}
       {!user.token && <Login />}
       <p>
         New User? <Link to="/NewAccount">Create Account</Link>
