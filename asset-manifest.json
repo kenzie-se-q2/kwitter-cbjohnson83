@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/kwitter-cbjohnson83/static/css/main.6938f919.chunk.css",
-    "main.js": "/kwitter-cbjohnson83/static/js/main.3e231598.chunk.js",
-    "main.js.map": "/kwitter-cbjohnson83/static/js/main.3e231598.chunk.js.map",
-    "runtime-main.js": "/kwitter-cbjohnson83/static/js/runtime-main.1e5cf72f.js",
-    "runtime-main.js.map": "/kwitter-cbjohnson83/static/js/runtime-main.1e5cf72f.js.map",
-    "static/js/2.5ecf0266.chunk.js": "/kwitter-cbjohnson83/static/js/2.5ecf0266.chunk.js",
-    "static/js/2.5ecf0266.chunk.js.map": "/kwitter-cbjohnson83/static/js/2.5ecf0266.chunk.js.map",
+    "main.js": "/kwitter-cbjohnson83/static/js/main.b318fd9e.chunk.js",
+    "main.js.map": "/kwitter-cbjohnson83/static/js/main.b318fd9e.chunk.js.map",
+    "runtime-main.js": "/kwitter-cbjohnson83/static/js/runtime-main.03820e7c.js",
+    "runtime-main.js.map": "/kwitter-cbjohnson83/static/js/runtime-main.03820e7c.js.map",
+    "static/js/2.ee1e5830.chunk.js": "/kwitter-cbjohnson83/static/js/2.ee1e5830.chunk.js",
+    "static/js/2.ee1e5830.chunk.js.map": "/kwitter-cbjohnson83/static/js/2.ee1e5830.chunk.js.map",
     "index.html": "/kwitter-cbjohnson83/index.html",
     "static/css/main.6938f919.chunk.css.map": "/kwitter-cbjohnson83/static/css/main.6938f919.chunk.css.map",
-    "static/js/2.5ecf0266.chunk.js.LICENSE.txt": "/kwitter-cbjohnson83/static/js/2.5ecf0266.chunk.js.LICENSE.txt"
+    "static/js/2.ee1e5830.chunk.js.LICENSE.txt": "/kwitter-cbjohnson83/static/js/2.ee1e5830.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1e5cf72f.js",
-    "static/js/2.5ecf0266.chunk.js",
+    "static/js/runtime-main.03820e7c.js",
+    "static/js/2.ee1e5830.chunk.js",
     "static/css/main.6938f919.chunk.css",
-    "static/js/main.3e231598.chunk.js"
+    "static/js/main.b318fd9e.chunk.js"
   ]
 }
