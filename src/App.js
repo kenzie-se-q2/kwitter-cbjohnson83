@@ -7,6 +7,7 @@ import Feed from "./views/Feed";
 import Profile from "./views/Profile";
 import UserUpdate from "./views/UserUpdate";
 import MessageList from "./views/MessageList";
+import DeleteUser from "./components/DeleteUser";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/profile/:username" component={Profile} />
         <Route exact path="/userupdate" component={UserUpdate} />
         <Route exact path="/messages" component={MessageList} />
+        <Route exact path="/userdeleted" component={DeleteUser} />
 
         <Route component={NotFound} />
       </Switch>

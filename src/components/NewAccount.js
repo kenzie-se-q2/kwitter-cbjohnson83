@@ -11,7 +11,10 @@ const NewAccount = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   useEffect(() => {
     if (Object.keys(errors).length === 0 && isSubmitted) {
-      NewUserRequest(user.userName, user.displayName, user.password);
+      console.log(user);
+      NewUserRequest(user.userName, user.firstName, user.password).then((res) =>
+        console.log(res.json())
+      );
       setFormSubmitted(true);
     }
     return () => {

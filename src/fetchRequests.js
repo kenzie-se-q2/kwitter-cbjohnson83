@@ -73,3 +73,10 @@ export const postMessageRequest = (userMessages, token) => {
     }),
   }).then((res) => res.json());
 };
+
+export const DeleteuserRequest = (token, username) => {
+  return fetch(baseURL + "users/" + username, {
+    method: "DELETE",
+    headers: { Authorization: "Bearer " + token },
+  }).then((res) => res.json());
+};
