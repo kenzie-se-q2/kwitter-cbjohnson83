@@ -54,7 +54,7 @@ function UserUpdate() {
       currentUser.about,
       currentUser.displayName
     );
-    // setCurrentUser({});
+    alert("User Information Update Successful");
   }
 
   function fetchUser(token, username, about, displayName) {
@@ -93,6 +93,7 @@ function UserUpdate() {
     putUserPicture(authUser.token, authUser.username, newPicture).then((res) =>
       console.log(res)
     );
+    alert("Picture Upload Successful");
   }
   //   useEffect(() => {
   //     if (setFormSubmit === true) {

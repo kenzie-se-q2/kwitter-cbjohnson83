@@ -39,9 +39,6 @@ function AllUsers() {
                 <td style={tstyle.td}> {user.username}</td>
                 <td style={tstyle.td}> {user.displayName}</td>
                 <td style={tstyle.td}> {user.about}</td>
-                <td>
-                  <button>Show Image</button>
-                </td>
               </tr>
             );
           })}
