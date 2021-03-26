@@ -6,7 +6,6 @@ const tstyle = {
     textAlign: "center",
     fontFamily: "Trebuchet MS, Arial, Helvetica, sansSerif",
     borderCollapse: "collapse",
-    // border: "3px solid #ddd",
     width: "85%",
   },
   tr: { color: "red" },

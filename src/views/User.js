@@ -10,7 +10,6 @@ function User({ match }) {
   const [about, setAbout] = useState("");
 
   useEffect(() => {
-    // get user info
     getUser(match.params.username).then((data) => {
       setUser(data.user);
       setDisplayName(data.user.displayName);

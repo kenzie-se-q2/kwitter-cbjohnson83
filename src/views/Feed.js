@@ -17,7 +17,6 @@ export default function Feeds() {
       });
     });
   }, [subreddit]);
-  //   const submit = ()
   return (
     <div className="Feed">
       <header className="Feed-header">

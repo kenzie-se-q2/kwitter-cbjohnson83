@@ -4,18 +4,6 @@ import Menu from "../components/Menu";
 import MessageItem from "../components/MessageItem";
 import { messageRequest, postMessageRequest } from "../fetchRequests";
 
-// const tableStyle = {
-//   table: {
-//     textAlign: "center",
-//     fontFamily: "sans-serif",
-//     borderCollapse: "collapse",
-//     width: "85%",
-//   },
-//   tr: { color: "purple" },
-//   trInfo: { color: "black" },
-//   td: { border: "1px solid #ddd", padding: "8px" },
-// };
-
 export default function MessageList() {
   const { dispatch, messages, user } = useStore((state) => state);
   const [userMessages, setUserMessages] = useState("");
@@ -34,14 +22,6 @@ export default function MessageList() {
       );
     });
   }
-
-  // function handleDeleteUserMessage(e) {
-  //   deleteUserMessage(userMessages, user.token).then(() => {
-  //     dispatch({ type: DELETEMESSAGE });
-  //     messageRequest().then((data) =>
-  //       dispatch({ type: GETMESSAGES, payload: data.messages })
-  //   deleteUser();
-  // }
 
   return (
     <>

@@ -7,9 +7,6 @@ import Menu from "../components/Menu";
 import Profile from "./Profile";
 import AllUsers from "./allUsers";
 
-// function Home(props) {
-//   const user = useStore((state) => state.user);
-
 function Home(props) {
   const user = useStore((state) => state.user);
   const [showUserList, setShowUserList] = useState(false);
@@ -31,14 +28,6 @@ function Home(props) {
       </div>
       {!user.token && <Login />}
       {user.token && <Profile />}
-      {/* <p>
-        New User? <Link to="/NewAccount">Create Account</Link>
-      </p> */}
-      {/* {!user.token && (
-        <p>
-          New User? <Link to="/users">Create Account</Link>
-        </p>
-      )} */}
       {!user.token &&
         (showUserList === false ? (
           <button onClick={handleShowUserList}>Show List of Users</button>
