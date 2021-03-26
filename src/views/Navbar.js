@@ -6,7 +6,10 @@ import { LOGIN, useStore } from "../store/store";
 const Navbar = () => {
   const dispatch = useStore((state) => state.dispatch);
   function handleMessage(event) {
-    console.log(event);
+    // console.log(event);
+    if (!event || !event.data || !event.data.token) {
+      return;
+    }
     dispatch({ type: LOGIN, payload: event.data });
   }
   useEffect(() => {
@@ -16,7 +19,7 @@ const Navbar = () => {
     };
   }, []);
   function handleGoogleLogin(e) {
-    window.open("http://kwitter-api-b.herokuapp.com/auth/google/login");
+    window.open("https://socialapp-api.herokuapp.com/auth/google/login");
   }
   return (
     <>
@@ -35,9 +38,9 @@ const Navbar = () => {
         {/* <div id="contactUs">
            <Link to="/contactUs">Contact Us</Link>
          </div> */}
-        {/* <div id="Search">
+        <div id="Search">
           <Link to="/Feeds">Search Articles</Link>
-        </div> */}
+        </div>
         <button onClick={handleGoogleLogin}>Google Sign In</button>
       </div>
       {/* </NavMenu> */}

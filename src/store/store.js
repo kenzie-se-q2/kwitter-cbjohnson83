@@ -18,7 +18,7 @@ const reducer = (state, action) => {
     case LOGOUT:
       return { user: {} };
     case GETMESSAGES:
-      return { messages: {} };
+      return { messages: action.payload };
     case POSTMESSAGES:
       return state;
 

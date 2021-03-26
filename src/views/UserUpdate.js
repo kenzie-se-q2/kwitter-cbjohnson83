@@ -22,7 +22,7 @@ function UserUpdate() {
   const [newPicture, setNewPicture] = useState({});
 
   useEffect(() => {
-    fetch("https://kwitter-api-b.herokuapp.com/users/" + authUser.username)
+    fetch("https://socialapp-api.herokuapp.com/users/" + authUser.username)
       //  .then((response) => response.json())
       //  .then((response) => setUserData(response))
 
@@ -58,7 +58,7 @@ function UserUpdate() {
   }
 
   function fetchUser(token, username, about, displayName) {
-    return fetch("https://kwitter-api-b.herokuapp.com/users/" + username, {
+    return fetch("https://socialapp-api.herokuapp.com/users/" + username, {
       method: "PATCH",
       headers: {
         Authorization: "Bearer " + token,

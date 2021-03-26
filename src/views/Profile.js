@@ -22,7 +22,7 @@ function Profile() {
   //   const [picture, setPicture] = useState({});
 
   useEffect(() => {
-    fetch("https://kwitter-api-b.herokuapp.com/users/" + authUser.username)
+    fetch("https://socialapp-api.herokuapp.com/users/" + authUser.username)
       //  .then((response) => response.json())
       //  .then((response) => setUserData(response))
 

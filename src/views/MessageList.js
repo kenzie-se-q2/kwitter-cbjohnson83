@@ -54,9 +54,10 @@ export default function MessageList() {
       />
       <button onClick={submitHandler}>Post Message</button>
       <h1>Message List</h1>
-      {messages.map((message) => {
-        return <MessageItem {...message} />;
-      })}
+      {messages &&
+        messages.map((message) => {
+          return <MessageItem {...message} />;
+        })}
     </>
   );
 }
