@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
 import { useStore } from "../store/store";
@@ -16,6 +14,8 @@ function Profile() {
     username: "",
     displayName: "",
     about: "",
+    createdAt: "",
+    updatedAt: "",
   });
 
   // const [displayName, setDisplayName] = useState();
@@ -72,6 +72,10 @@ function Profile() {
         <Card.Text>{currentUser.displayName}</Card.Text>
         <div>About Me:</div>
         <Card.Text>{currentUser.about}</Card.Text>
+        <div>Profile Created At:</div>
+        <Card.Text>{currentUser.createdAt}</Card.Text>
+        <div>Profile Updated At:</div>
+        <Card.Text>{currentUser.updatedAt}</Card.Text>
       </Card.Body>
       <button>
         <Link to="/userupdate">Update User Information</Link>
@@ -83,4 +87,3 @@ function Profile() {
 }
 
 export default Profile;
-

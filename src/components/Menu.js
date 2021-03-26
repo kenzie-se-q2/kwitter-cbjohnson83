@@ -13,11 +13,9 @@ function Menu(props) {
 
   return (
     <div id="menu">
-      <div id="meetindMindz">
-        <h1>Meeting of the Mindz</h1>
-      </div>
+      <h1>Kwitter</h1>
       <div id="menu-links">
-        <Link to="/messages">Messages</Link>
+        <Link to="/messagelist">Messages</Link>
         {user.token && <button onClick={logout}>Logout</button>}
       </div>
     </div>

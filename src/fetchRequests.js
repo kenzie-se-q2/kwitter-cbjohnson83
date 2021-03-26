@@ -1,8 +1,4 @@
-
-//const baseURL = "https://socialapp-api.herokuapp.com/";
 const baseURL = "https://kwitter-api-b.herokuapp.com/";
-// const getPicture =
-
 
 export const loginRequest = (username, password) => {
   return fetch(baseURL + "auth/login", {
@@ -87,4 +83,34 @@ export const putUserPicture = (token, username, pictureData) => {
   //   // Then create a local URL for that image and print it
   //   getPicture = URL.createObjectURL(images)
   //   console.log(getPicture) }
+};
+
+export const messageRequest = () => {
+  return fetch(baseURL + "messages", {}).then((res) => res.json());
+};
+
+export const postMessageRequest = (userMessages, token) => {
+  return fetch(baseURL + "messages", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
+    },
+    body: JSON.stringify({
+      text: userMessages,
+    }),
+  }).then((res) => res.json());
+};
+
+export const deleteUserMessage = (userMessages, token) => {
+  fetch(baseURL + "messages", {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
+    },
+    body: JSON.stringify({
+      text: userMessages,
+    }),
+  }).then((res) => res.json());
 };

@@ -8,7 +8,7 @@ import Feed from "./views/Feed";
 import { useStore } from "./store/store";
 import Profile from "./views/Profile";
 import UserUpdate from "./views/UserUpdate";
-
+import MessageList from "./views/MessageList";
 
 function App() {
   const user = useStore((state) => state.user);
@@ -24,7 +24,7 @@ function App() {
         <Route exact path="/users" component={NewAccount} />
         <Route exact path="/profile/:username" component={Profile} />
         <Route exact path="/userupdate" component={UserUpdate} />
-
+        <Route exact path="/messagelist" component={MessageList} />
       </Switch>
     </div>
   );
