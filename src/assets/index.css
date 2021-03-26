@@ -6,7 +6,6 @@ body {
     rgb(231, 99, 99) 5%
   );
 
-
   /* background-image: url(src/asset/image/meeting_of_the_mindz2.jpg); */
   /* background-image: url(https://riskthinking.ai/wp-content/uploads/2020/08/meetingoftheminds-logo-square.jpg), */
   /* no-repeat; */
@@ -65,11 +64,11 @@ code {
   font-size: 16px;
 }
 
-
 #contactUs:hover {
   border: none;
   background-color: rgb(243, 142, 189);
   padding: 3px 2px;
+}
 
 #message:hover {
   border: none;
@@ -81,7 +80,6 @@ code {
   display: inline-block;
   font-size: 16px;
 }
-
 
 #Search:hover {
   border: none;
@@ -115,9 +113,6 @@ code {
   /* display: inline-block; */
   background-color: rgb(243, 145, 145);
   margin: 2px;
-=======
-#message {
-
 }
 
 #nav {
@@ -143,3 +138,15 @@ h1 {
   text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+button {
+  color: rgb(107, 53, 14);
+  background-color: rgb(240, 144, 160);
+}
+
+#shareIdeas {
+  text-transform: uppercase;
+  color: rgb(83, 6, 22);
+}
+>>>>>>> 1b9d274 (Correcting merge)

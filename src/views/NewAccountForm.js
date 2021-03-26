@@ -1,67 +1,19 @@
-import React from 'react'
-import {Link} from "react-router-dom"
-import useNewAccountStore from"../store/useNewAccountStore"
+import React from "react";
+import { Link } from "react-router-dom";
+import useNewAccountStore from "../store/useNewAccountStore";
 
-const errorStyle = {color: "red"}
+const errorStyle = { color: "red" };
 const NewAccountForm = () => {
-    const user = useNewAccountStore(state =>state.user)
-    const handleChange = useNewAccountStore(state =>state.handleChange)
-    const handleSubmit = useNewAccountStore(state =>state.handleSubmit)
-    const errors = useNewAccountStore(state =>state.errors)
-    const clickLogin = useNewAccountStore(state =>state.afterSubmit)
-    return (
-        <>
-        <div className = "newAccountFormContainer">
-            <form className ="newAccountFom"  onSubmit ={handleSubmit}>
-            <div className = "firstName">
-                <label>User Name:</label>
-                <input name = "userName" type = "text" value = {user.userName} 
-                onChange = {handleChange}/>
-                <p style = {errorStyle}>{errors.userName}</p>
-            </div>
-            <div className = "lastName">
-                <label>Display Name:</label>
-                <input name = "displayName" type = "text" value ={user.displayName} 
-                onChange = {handleChange}/>
-                  <p style = {errorStyle}>{errors.displayName}</p>
-            </div>
-           
-            <div className = "password">
-                <label>Password:</label>
-                <input name = "password" type = "password" value = {user.password} 
-                onChange = {handleChange}/>
-                  <p style = {errorStyle}>{errors.password}</p>
-            </div>
-
-            <div className = "comfirm password">
-                <label>Comfirm Password:</label>
-                <input name = "comfirmPassword" type = "password" value = {user.comfirmPassword} 
-                onChange = {handleChange}/>
-                  <p style = {errorStyle}>{errors.comfirmPassword}</p>
-                </div>
-
-            <button className= "submit" type ="submit">Create Account</button>
-             <span> You have an Account?<Link to="/" ><button onClick={clickLogin}>Login</button></Link></span>
-            
-            </form>     
-        </div>
-        </>
-    )
-}
-export default NewAccountForm
-
-
-          <div className="email">
-            <label>Email:</label>
-            <input
-              name="email"
-              type="email"
-              value={user.email}
-              onChange={handleChange}
-            />
-            <p>{errors.email}</p>
-          </div>
-          <div className="userName">
+  const user = useNewAccountStore((state) => state.user);
+  const handleChange = useNewAccountStore((state) => state.handleChange);
+  const handleSubmit = useNewAccountStore((state) => state.handleSubmit);
+  const errors = useNewAccountStore((state) => state.errors);
+  const clickLogin = useNewAccountStore((state) => state.afterSubmit);
+  return (
+    <>
+      <div className="newAccountFormContainer">
+        <form className="newAccountFom" onSubmit={handleSubmit}>
+          <div className="firstName">
             <label>User Name:</label>
             <input
               name="userName"
@@ -69,8 +21,19 @@ export default NewAccountForm
               value={user.userName}
               onChange={handleChange}
             />
-            <p>{errors.userName}</p>
+            <p style={errorStyle}>{errors.userName}</p>
           </div>
+          <div className="lastName">
+            <label>Display Name:</label>
+            <input
+              name="displayName"
+              type="text"
+              value={user.displayName}
+              onChange={handleChange}
+            />
+            <p style={errorStyle}>{errors.displayName}</p>
+          </div>
+
           <div className="password">
             <label>Password:</label>
             <input
@@ -79,24 +42,29 @@ export default NewAccountForm
               value={user.password}
               onChange={handleChange}
             />
-            <p>{errors.password}</p>
+            <p style={errorStyle}>{errors.password}</p>
           </div>
-          <div className="confirmPassword">
-            <label>Confirm Password:</label>
+
+          <div className="comfirm password">
+            <label>Comfirm Password:</label>
             <input
               name="comfirmPassword"
               type="password"
               value={user.comfirmPassword}
               onChange={handleChange}
             />
-            <p>{errors.comfirmPassword}</p>
+            <p style={errorStyle}>{errors.comfirmPassword}</p>
           </div>
+
           <button className="submit" type="submit">
             Create Account
           </button>
           <span>
             {" "}
-            You have an Account?<Link to="/">Login</Link>
+            You have an Account?
+            <Link to="/">
+              <button onClick={clickLogin}>Login</button>
+            </Link>
           </span>
         </form>
       </div>
