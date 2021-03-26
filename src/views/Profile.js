@@ -3,6 +3,7 @@ import { Card } from "react-bootstrap";
 import { useStore } from "../store/store";
 import { getUserPhoto } from "../fetchRequests";
 import { Link } from "react-router-dom";
+import DeleteUser from "../components/DeleteUser";
 
 function Profile() {
   const authUser = useStore((state) => state.user);
@@ -23,7 +24,7 @@ function Profile() {
     <>
       <Card.Body>
         <div>
-          <img src={getUserPhoto(authUser.username)} alt="Starting image" />
+          <img src={getUserPhoto(authUser.username)} />
           <h1>
             <Card.Title>Profile Information: </Card.Title>
           </h1>
@@ -34,10 +35,17 @@ function Profile() {
         <Card.Text>{currentUser.displayName}</Card.Text>
         <div>About Me:</div>
         <Card.Text>{currentUser.about}</Card.Text>
+        <div>Created At: </div>
+        <Card.Text>{currentUser.createdAt}</Card.Text>
+        <div>Updated At:</div>
+        <Card.Text>{currentUser.updatedAt}</Card.Text>
       </Card.Body>
       <button>
         <Link to="/userupdate">Update User Information</Link>
       </button>
+
+      {/* <Link to="/">Delete User Profile</Link> */}
+      <DeleteUser />
     </>
   );
 }
