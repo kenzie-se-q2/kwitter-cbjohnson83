@@ -1,1 +1,5 @@
-// TODO: create a MessageItem component which displays 1 message
+import React from "react";
+
+export default function MessageItem(props) {
+  return <div>{props.text}</div>;
+}
