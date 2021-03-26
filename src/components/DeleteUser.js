@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+
 import { DeleteuserRequest } from "../fetchRequests";
 import { useStore } from "../store/store";
 
@@ -16,11 +17,11 @@ const DeleteUser = () => {
   useEffect(() => {
     if (deleteUser === true) {
       alert("User Deletion Successful");
-      window.location.reload(true);
+      //   window.location.reload(true);
     }
     return () => {
       if (deleteUser === false) {
-        window.location.reload(false);
+        // window.location.reload(false);
       }
     };
   }, [deleteUser]);
@@ -29,6 +30,7 @@ const DeleteUser = () => {
       <Link to="/">
         <button onClick={handleOnClick}>Delete Profile</button>
       </Link>
+      {deleteUser && <Redirect to="/" />}
     </div>
   );
 };

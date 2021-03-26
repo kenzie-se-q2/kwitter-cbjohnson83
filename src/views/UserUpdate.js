@@ -42,7 +42,7 @@ function UserUpdate() {
       .then((res) => res.json())
       .then((res) => console.log(res));
   }
-
+  // console.log(currentUser);
   function handleOnChange(event) {
     const { name, value } = event.target;
     setCurrentUser({
