@@ -3,6 +3,11 @@ import { Form, Button, Container } from "react-bootstrap";
 import { useStore } from "../store/store";
 import { getUser, patchUser } from "../fetchRequests";
 
+  {/* <!-- ////////////////////////////////////////////////////////////
+    It's doesn't appear that this file is ever being used. Remember 
+    when you finish a project to remove unused variables, unused
+    imports, unused functions, and unused files.
+  //////////////////////////////////////////////////////////// --> */}
 function User({ match }) {
   const authUser = useStore((state) => state.user);
   const [user, setUser] = useState({});

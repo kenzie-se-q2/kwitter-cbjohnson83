@@ -26,6 +26,9 @@ export default function MessageList() {
   return (
     <>
       <Menu />
+  {/* <!-- ////////////////////////////////////////////////////////////
+  Users should only be able to add a message if they are logged in.
+  //////////////////////////////////////////////////////////// --> */}
       <input
         type="text"
         onChange={(e) => setUserMessages(e.target.value)}

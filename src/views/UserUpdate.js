@@ -18,6 +18,10 @@ function UserUpdate() {
       .then((resp) => resp.json())
       .then((resp) => setCurrentUser(resp.user));
   }, [authUser]);
+  {/* <!-- ////////////////////////////////////////////////////////////
+    It would be best practice to import the variable from fetchRequests.js 
+    so that if it ever needs to be changed it only has to be changed in one place.
+  //////////////////////////////////////////////////////////// --> */}
 
   function handleSubmitUserUpdate(event) {
     event.preventDefault();
@@ -42,6 +46,10 @@ function UserUpdate() {
       .then((res) => res.json())
       .then((res) => console.log(res));
   }
+  {/* <!-- ////////////////////////////////////////////////////////////
+    It would be best practice to import the variable from fetchRequests.js 
+    so that if it ever needs to be changed it only has to be changed in one place.
+  //////////////////////////////////////////////////////////// --> */}
   // console.log(currentUser);
   function handleOnChange(event) {
     const { name, value } = event.target;

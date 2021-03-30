@@ -15,6 +15,14 @@ const DeleteUser = () => {
       console.log(res)
     );
     logoutRequest(currentUser.token).then(() => dispatch({ type: "LOGOUT" }));
+    {/* <!-- ////////////////////////////////////////////////////////////
+      Doing this in this order is causing a 404. Basically we're deleteing the 
+      profile. After that we can't log out the use because the user no longer 
+      exists. So, we could log out the user and then delete.. Or, we could
+      just do the dispatch({type: "LOGOUT"}) inside of the .then() of the
+      DeleteUserRequest()
+    //////////////////////////////////////////////////////////// --> */}
+    
   };
 
   useEffect(() => {
@@ -26,6 +34,13 @@ const DeleteUser = () => {
       }
     };
   }, [deleteUser]);
+
+  {/* <!-- ////////////////////////////////////////////////////////////
+    I would recommend having some kind of confirmation before deleting a account.
+    If a kid or cat is playing at the user's laptop we don't want to make it 
+    easy for their account to be accidentally deleted.
+  //////////////////////////////////////////////////////////// --> */}
+  
   return (
     <div>
       <button onClick={handleOnClick}>Delete Profile</button>
