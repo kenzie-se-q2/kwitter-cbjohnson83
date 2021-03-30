@@ -7,6 +7,10 @@ import Menu from "../components/Menu";
 import Profile from "./Profile";
 import AllUsers from "./allUsers";
 
+{/* <!-- ////////////////////////////////////////////////////////////
+  Whenever you finish a project, be sure to cleanup your code and remove
+  unnecessary code or variables (such as Link above)
+//////////////////////////////////////////////////////////// --> */}
 function Home(props) {
   const user = useStore((state) => state.user);
   const [showUserList, setShowUserList] = useState(false);
@@ -29,6 +33,9 @@ function Home(props) {
       {!user.token && <Login />}
       {user.token && <Profile />}
       {!user.token &&
+{/* <!-- ////////////////////////////////////////////////////////////
+Why can a user only see the userList if they are not logged in?
+//////////////////////////////////////////////////////////// --> */}
         (showUserList === false ? (
           <button onClick={handleShowUserList}>Show List of Users</button>
         ) : (

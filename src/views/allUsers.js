@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+  {/* <!-- ////////////////////////////////////////////////////////////
+    File naming conventions are important. The rest of the files in the 
+    project begin with a capital letter except for this file and 
+    newUserRegistered. I will have to take off 1 point for Naming conventions.
+  //////////////////////////////////////////////////////////// --> */}
+  
 const tstyle = {
   table: {
     textAlign: "center",
@@ -21,6 +27,11 @@ function AllUsers() {
       .then((resp) => resp.json())
       .then((resp) => setUsers(resp.users));
   }, []);
+  {/* <!-- ////////////////////////////////////////////////////////////
+    It would be best practice to import the variable from fetchRequests.js 
+    so that if it ever needs to be changed it only has to be changed in one place.
+  //////////////////////////////////////////////////////////// --> */}
+  
 
   return (
     <div>

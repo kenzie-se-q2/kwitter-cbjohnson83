@@ -19,6 +19,10 @@ const Navbar = () => {
   function handleGoogleLogin(e) {
     window.open("https://socialapp-api.herokuapp.com/auth/google/login");
   }
+  {/* <!-- ////////////////////////////////////////////////////////////
+    It would be best practice to import the variable from fetchRequests.js 
+    so that if it ever needs to be changed it only has to be changed in one place.
+  //////////////////////////////////////////////////////////// --> */}
   return (
     <>
       <div id="nav">

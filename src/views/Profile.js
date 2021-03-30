@@ -19,6 +19,11 @@ function Profile() {
       .then((resp) => resp.json())
       .then((resp) => setCurrentUser(resp.user));
   }, [authUser]);
+  {/* <!-- ////////////////////////////////////////////////////////////
+    It would be best practice to import the variable from fetchRequests.js 
+    so that if it ever needs to be changed it only has to be changed in one place.
+  //////////////////////////////////////////////////////////// --> */}
+  
 
   return (
     <>

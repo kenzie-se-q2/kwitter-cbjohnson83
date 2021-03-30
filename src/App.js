@@ -18,6 +18,12 @@ function App() {
         <Route exact path="/newaccount" component={NewAccount} />
         <Route exact path="/Feeds" component={Feed} />
         <Route exact path="/profile/:username" component={Profile} />
+
+  {/* <!-- ////////////////////////////////////////////////////////////
+  This Route isn't being used. It could've been used for the Profile, 
+  or it could've been used to create links for each of the user's 
+  profiles.
+  //////////////////////////////////////////////////////////// --> */}
         <Route exact path="/userupdate" component={UserUpdate} />
         <Route exact path="/messages" component={MessageList} />
         <Route exact path="/userdeleted" component={DeleteUser} />
